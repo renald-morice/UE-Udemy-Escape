@@ -3,9 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "GameFramework/Actor.h"
 #include "Engine/TriggerVolume.h"
+#include "Components/ActorComponent.h"
 
 #include "OpenDoor.generated.h"
 
@@ -25,10 +25,14 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
+	void OpenDoor();
+
 private:
 	UPROPERTY(VisibleAnywhere)
 	float OpenAngle = 0.0f;
 
 	UPROPERTY(EditAnywhere)
 	ATriggerVolume* PressurePlate;
+
+	AActor* OpeningActor;
 };
