@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "Runtime/Engine/Public/DrawDebugHelpers.h"
+#include "Runtime/Engine/Public/CollisionQueryParams.h"
 
 #include "Grabber.generated.h"
 
@@ -27,6 +28,8 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
-	float ReachPoint = 100.0f;
+	float ReachDistance = 100.0f;
+	FVector PlayerViewpointLocation;
+	FRotator PlayerViewpointRotator;
 		
 };
